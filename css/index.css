@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap');
+
+:root {
+  --main-color: #002376;
+  --secondary-color: #FFD700;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background:  var(--main-color);
+  font-family: 'Cairo', sans-serif;
+  color: var(--secondary-color);
+  width: 100%;
+}
+
+.container {
+  width: 90%;
+  padding: 0 15px;
+  margin: auto;
+}
+
+/* Header */
+.header {
+  background-color: #fff;
+  padding: 0px 0;
+  height: 100px;
+   margin-top: 0px;
+    padding-top: 0px;
+     height: 90px;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header img {
+  width: 80px;
+  animation: thebest 2s infinite;
+}
+
+@keyframes thebest {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(10px); }
+}
+
+.header .name {
+  color: var(--main-color);
+  font-weight: 900;
+  font-size: 20px;
+}
+
+/* Profile */
+.profile {
+  background-color: var(--main-color);
+  text-align: center;
+  padding: 30px 10px;
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.profile .image img {
+  width: 150px;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.profile .text {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.profile .text p {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.profile .text span {
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.profile .icon {
+  margin-top: 15px;
+  word-spacing: 15px;
+}
+
+.profile .icon i {
+  font-size: 30px;
+  color: #FFD700;
+  transition: 0.3s ease;
+}
+
+.profile .icon i:hover {
+  transform: scale(1.4) rotate(15deg);
+  color: #000000;
+    font-size: 35px;
+
+}
+
+.profile .icon a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+}
+
+/* Content */
+.contant {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.contant .col {
+  margin: 30px auto;
+  margin-top: 0px;
+  height: 50px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--secondary-color);
+  border-radius: 100px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.contant .col:hover {
+  transform: scale(1.06);
+  border-color: black;
+  background-color:  #000;
+  color:#FFF;
+}
+
+.contant a {
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.contant .col:hover a {
+  color: #FFF;
+}
+
+.contant .col span {
+  display: none;
+}
+
+.contant .col:hover span {
+  display: inline;
+  color: var(--main-color);
+}
+
+/* Media Queries */
+
+/* للأجهزة المتوسطة */
+@media (max-width: 768px) {
+  .header img {
+    width: 70px;
+  }
+
+  .header .name {
+    font-size: 18px;
+  }
+
+  .profile .text p {
+    font-size: 20px;
+  }
+
+  .contant .col {
+    width: 90%;
+  }
+
+  .contant a {
+    font-size: 18px;
+  }
+}
+
+/* للموبايل */
+@media (max-width: 500px) {
+ 
+  .header {
+    padding: 0px 0px;
+    height: 70px;
+    margin-top: -10px;
+  }
+
+  .header .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header .name {
+    font-size: 12px;
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+
+  .header img {
+    width: 40px;
+     margin-top: 0px;
+    padding-top: 0px;
+  }
+
+  .profile {
+    padding: 20px 10px;
+  }
+
+  .profile .image img {
+    width: 120px;
+  }
+
+  .profile .text p {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .profile .text span {
+    font-size: 22px;
+  }
+
+  .profile .icon i {
+    font-size: 20px;
+   }
+  .profile .icon  {
+    font-size: 20px;
+            margin-bottom: -40px;
+
+   }
+  .contant .col {
+    width: 95%;
+    height: 45px;
+    font-size: 14px;
+ 
+ 
+  }
+
+  .contant a {
+    font-size: 16px;
+  }
+
+  .contant .col:hover {
+    transform: none;
+    border-color: #fff;
+    background-color: transparent;
+    color: #fff;
+  }
+
+  .contant .col:hover a {
+    color: #fff;
+  }
+    .contant{
+
+    width: 95%;
+  }
+}
